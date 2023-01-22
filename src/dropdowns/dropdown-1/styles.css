@@ -1,0 +1,58 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown > button {
+  position: relative;
+  z-index: 2;
+}
+
+.dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  height: 64px;
+  border-radius: 6px;
+  color: #f9f9f9;
+  background-color: #211d26;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+.dropdown button:hover {
+  background: #2d2834;
+}
+
+.dropdown.open > button {
+  background: #712ae0;
+}
+
+.dropdown .menu {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  top: 61px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  translate: 0 -20px;
+  transition: 0.4s;
+}
+
+.dropdown .menu button {
+  height: 56px;
+  width: 100%;
+  border-radius: 0;
+}
+
+.dropdown.open .menu {
+  opacity: 1;
+  visibility: visible;
+  translate: 0;
+}

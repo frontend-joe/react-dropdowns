@@ -1,0 +1,12 @@
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background: #000000;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+html,
+body {
+  height: 100%;
+}
