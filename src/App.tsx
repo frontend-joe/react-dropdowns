@@ -1,4 +1,4 @@
-import { Dropdown } from "./dropdowns/dropdown-2/Dropdown";
+import { Dropdown } from "./dropdowns/dropdown-3/Dropdown";
 
 function App() {
   return <Dropdown />;
