@@ -57,7 +57,7 @@ const slides = [
   },
 ];
 
-export const Navbar = () => {
+export const Dropdown = () => {
   return (
     <nav>
       <img src={logo} />
