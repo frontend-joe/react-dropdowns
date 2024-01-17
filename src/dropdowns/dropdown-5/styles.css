@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #131314;
+  height: 100vh;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  width: 230px;
+  height: 72px;
+  color: #afb3b5;
+  background: #2d2f31;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Euclid Circular A";
+  transition: 0.3s;
+}
+
+.dropdown > button {
+  background: #1d1e1f;
+  border-radius: 6px;
+}
+
+.dropdown > button .material-symbols-outlined:first-child {
+  background: rgb(255 255 255 / 4%) !important;
+}
+
+.dropdown:hover > button,
+.dropdown button:hover {
+  color: #f9f9f9;
+}
+
+.menu button:hover .material-symbols-outlined:first-child {
+  color: #00fbff;
+  background: #4b5858;
+}
+
+.dropdown.open > button .chevron {
+  rotate: -180deg;
+}
+
+.dropdown button .chevron {
+  margin-left: auto;
+  transition: 0.3s;
+}
+
+.menu {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  top: 82px;
+  left: 0;
+  width: 100%;
+  height: 168px;
+  opacity: 0;
+  transform: translateY(-20px);
+  visibility: hidden;
+  border-radius: 6px;
+  background: #2d2f31;
+  transition: 0.3s;
+}
+
+.dropdown.open .menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.main-menu {
+  width: 230px;
+}
+
+.menu-inner {
+  position: absolute;
+  width: 460px;
+  display: flex;
+  transition: 0.4s;
+}
+
+.menu-inner.open {
+  translate: -50%;
+}
+
+.menu button {
+  border: 0;
+  height: 56px;
+  border-radius: 0;
+  text-transform: capitalize;
+}
+
+.menu button:hover {
+  background: #1d1e1f;
+}
+
+.sub-menu {
+  position: absolute;
+  width: 230px;
+  left: 230px;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sub-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown button .material-symbols-outlined:first-child {
+  background: #4e4f51;
+  color: #afb3b5;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 6px;
+  transition: 0.3s;
+}
